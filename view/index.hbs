@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../public/css/syless.css">
+    <title>Document</title>
+    <style>
+       body{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+        .head{
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    color:#33b5e5;
+        }
+
+
+       .menu{
+           display: flex;
+           justify-content: space-between;
+       }
+       .menu .item{
+           font-family: 'Montserrat', sans-serif;
+           text-decoration: none;
+           
+           color:white;
+           font-weight: bolder;
+           padding: 10px;
+           margin-top: 100px;
+           margin-left: 10px;
+           margin-right: 10px;
+           text-align: center;       
+           width:200px;
+           height: 100px;
+           {{!-- background-color: #ffbb33; --}}
+           border: solid white ;
+           border-radius: 12px ;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+           }
+
+
+           #one{
+               background-color: #33b5e5;
+           }
+           #two{
+               background-color: #343A40;
+           }
+           #three{
+              background-color: #28A745;
+           }
+           #four{
+               background-color: #FFC107;
+           }
+           #five{
+               background-color: #DC3545;
+           }
+
+           .menu .item :hover {
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+
+.blog{
+    font-family: 'Montserrat', sans-serif;
+       color: #33b5e5;
+       
+
+}
+h1{
+    color:#343A40;
+}
+
+   
+
+    </style>
+</head>
+<body>
+    <div class = "head">
+        <h1>LIQUORS Inventory Management System</h1>
+    </div>
+
+    <div class = "images">
+        <img src="https://cdn.pixabay.com/photo/2012/04/12/19/03/barrel-30200_960_720.png" height="200" alt="">
+    </div>
+
+
+
+    <div class = "menu">
+        <a class="item" id = "one" href="/add">ADD ITEM </a>
+        <a class="item" id = "three" href="/update">UPDATE ITEM </a>
+        <a class="item" id = "four"  href="/delete">DELETE ITEM </a>
+        <a class="item" id = "five" href="/view">VIEW ITEM </a>
+        {{!-- <a class="item" id = "two" href="/search">SEARCH ITEM </a> --}}
+    </div>
+    <div class = "blog">
+    <h2>What is a CRUD App?? </h2>
+A CRUD app is a specific type of software application that consists of four basic operations; Create, Read, Update, Delete.
+<br><br>
+At a high level, a CRUD apps consist of three parts; the database, user interface, and APIs.
+<br><br>
+Database
+The database is where your data is stored. A database management system is used to manage the database. There are several different types of database management systems (DBMS) that can be categorized by how they store data; relational (SQL), Document (NoSQL). If you are deciding what DBMS to choose for your CRUD app, here’s a list of the 14 best database management systems . Going forward, our content will focus on SQL. SQL databases consist of tables. Tables consist of records. Records consist of fields. Fields consist of data.
+<br><br>
+User Interface
+The user interface (UI) is what your users interact with. Due to the increasing popularity of applications, businesses are now prioritizing user interface design and user experience.
+<br><br>
+APIs
+Finally, the APIs are how your application informs your database of what functions to perform. These functions can be modeled in different ways but they are designed to perform four basic CRUD operations; Create, Read, Update, Delete.
+<br><br>
+CRUD operations
+As previously mentioned, there are four basic CRUD operations; create, read, update and delete. These four operations map to functions/statements.
+<br><br>
+</div>
+</body>
+</html>

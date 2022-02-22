@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+            background-color: #28A745;
+}
+label{
+    margin-left: 35%;
+}
+
+input{
+   height: 25px;
+   margin-left: 15px;
+   text-align: center;
+   border: solid 2px ;
+   border-radius: 5px;
+   
+}
+
+button{
+    margin-top: 60px;
+    margin-left: 49%;
+    border: 1px solid;
+    border-radius: 2px;
+    padding: 10px;
+    font-family:  'Montserrat', sans-serif;
+            background-color:white;
+}
+
+a{
+    margin-top: 40px;
+padding: 10px;
+margin-left: 48%;
+border: 1px solid ;
+border-radius: 2px;
+text-decoration: none;
+background-color: white;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <form action="/updatesearch">
+            <h3>SEARCH ITEM TO UPDATE</h3>
+            <br>
+            <hr>
+            <label for="ItemName">
+                <b>Item Name</b>
+            </label>
+            <input type="ItemsName" placeholder="Enter item name to be searched" name = "ItemsName" id = "Item_Name" size = "50" required>
+            <button type="submit" class = "registerbtn">SEARCH ITEM </button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+         
+            <br>
+            <a href="./" style ="color:black" ">Return to Home</a>
+<br>
+{{#if mesg2}}
+        <h3>data not found</h3>
+        {{/if}}
+</form>
+</div>
+{{!-- search form design end --}}
+        {{#if mesg1}}
+           <div class = "container">
+        <form action="/updateitem"><h3>Update item</h3>
+        <hr>
+{{#data}}
+
+        <label for="ItemId">ItemId</label>
+        <input type="text" placeholder="enter itemid" name = "ItemsId" value="{{ItemId}}" id = "Item_Id" required >
+        <hr>
+        <label for="ItemName">itemName</label>
+        <input type="text" placeholder="enter item Name" name = "ItemsName" value="{{ItemName}}" id = "Item_Name" required  >
+        <hr>
+        <label for="category">category</label>
+        <input type="text" placeholder="enter category" name = "Categorys" value="{{category}}" id = "Category_" required>
+        <hr>
+        <label for="ItemPrice">Item Price</label>
+        <input type="text" placeholder="enter item price" name = "ItemPrices" value="{{ItemPrice}}"id = "Item_Price" required  >
+        <hr>
+        <label for="StockQuantity"> Stock Quantity </label>
+        <input type="text" placeholder="Enter Stock Quantity" name = "StockQuantitys" value="{{StockQuantity}}" id = "StockQuantity_" >
+        <hr>
+
+        <div class = "Availability">
+            <strong>Availability</strong>
+            <input type="radio" name = "availabilitys" id="availability_s"  value = "YES">Yes
+            <input type="radio" name = "availabilitys" id="availability_s"  value = "NO">No
+
+        </div>
+        <button  type = "submit" class = "registerbtn">UPDATE item</button>
+{{/data}}
+<br>
+<br>
+
+        <a href="./" style = "color:black"><span>Back to home page</span></a> <br>
+        
+    </div>
+        {{/if}}
+        </form>
+    </div>
+</body>
+</html>

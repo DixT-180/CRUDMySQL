@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            background-color:#33B5E5;
+            color: white;
+        }
+      .registerbtn{
+          margin-top: 30px;
+          font-family:'Montserrat', sans-serif; 
+          font-size: 20px;
+      }
+  
+a{
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: solid 1px;
+    background-color: white;
+    margin-left: 35%;
+}
+
+label{
+    margin:0px 200px 0px 400px;
+
+}
+
+ input{
+    border-radius: 0.5px;
+    height: 20px;
+} 
+button{
+    background-color: white;
+}
+
+
+form #Item_Id {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+
+form #Item_Name {
+    margin-top: 20px;
+    text-align: center;
+}
+form #Category_ {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form #Item_Price {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form #StockQuantity_{
+    margin-top: 20px;
+    text-align: center;
+}
+form #availability_s{
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <form action="/additem"><h3>ADD item</h3>
+        
+        <label for="ItemId">ItemId</label>
+        <input type="text" placeholder="Enter ItemId" name = "ItemsId" id = "Item_Id" size="50" height="20" required >
+         <br>
+        <label for="ItemName">Item Name</label>
+        <input type="text" placeholder="Enter item Name" name = "ItemsName" id = "Item_Name" size="50" >
+        <br>
+        <label for="category">Category</label>
+        <input type="text" placeholder="EnteR type of drink" name = "Categorys" id = "Category_" size="50" >
+         <br>
+        <label for="ItemPrice">Item Price</label>
+        <input type="text" placeholder="Enter item price" name = "ItemPrices" id = "Item_Price" size="50" >
+         <br>
+        <label for="StockQuantity"> Stock Quantity </label>
+        <input type="text" placeholder="Enter Stock Quantity" name = "StockQuantitys" id = "StockQuantity_" size="50">
+        <hr>
+
+        <div class = "Availability">
+            <strong>Availability</strong>
+            <input type="radio" name = "availabilitys" id="availability_s" value = "YES">Yes
+            <input type="radio" name = "availabilitys" id="availability_s" value = "NO">No
+
+        </div>
+        <button type = "submit" class = "registerbtn">ADD item</button>
+
+        <a href="./" style = "color:black"><span>Return to Home</span></a> <br>
+        
+        {{#if mesg}}
+        <h3>Data Inserted</h3>
+        {{/if}}
+
+         {{#if checkmesg}}
+        <h3>item id or item name already present</h3>
+        {{/if}}
+
+
+        </form>
+    </div>
+</body>
+</html>
